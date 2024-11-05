@@ -54,24 +54,38 @@ main {
 .projects {
     display: flex;
     justify-content: space-between;
+    gap: 20px; /* Espaço entre os projetos */
 }
 
 .project {
-    width: 30%;
+    width: 30%; /* Tamanho das colunas (aproximadamente 3 colunas) */
     text-align: center;
+    position: relative; /* Necessário para o posicionamento do conteúdo */
+    overflow: hidden; /* Para cortar as partes da imagem que ultrapassam o tamanho da coluna */
     transition: transform 0.3s;
 }
 
 .project img {
     width: 100%;
-    height: auto; /* Keep aspect ratio */
+    height: 100%; /* Faz com que a imagem tenha 100% da altura do contêiner */
+    object-fit: cover; /* Faz com que a imagem preencha o contêiner, mantendo a proporção e cortando se necessário */
+    object-position: center; /* Centraliza a imagem para que o corte seja feito de forma equilibrada */
 }
 
 .project h2 {
-    margin: 10px 0;
+    position: absolute; /* Coloca o título sobre a imagem */
+    top: 95%; /* Posiciona o título no meio da coluna */
+    left: 50%; /* Centraliza o título horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o título para ser exatamente centrado */
+    z-index: 10; /* Garante que o título fique acima da imagem */
+    color: white; /* Cor do texto (ajuste conforme necessário) */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o título */
+    padding: 10px; /* Espaçamento em torno do título */
+    font-size: 1.2rem; /* Tamanho da fonte (ajuste conforme necessário) */
+    margin: 0; /* Remove margens padrão do h2 */
 }
 
 .project:hover {
-    transform: scale(1.05); /* Highlight effect on hover */
+    transform: scale(1.05); /* Efeito de destaque ao passar o mouse */
     cursor: pointer;
 }
