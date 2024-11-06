@@ -11,18 +11,27 @@ body {
 
 header {
     background-color: #c30a0d; /* Red background */
-    color: white;
+    color: #f2ebdb;
     text-align: center;
     padding: 20px 0;
 }
 
 .logo {
-    width: 200px; /* Adjust as necessary */
+    width: 300px; /* Adjust as necessary */
+    margin: 40px;
 }
 
 nav {
     background-color: #000; /* Dark background */
     min-height: 3em;
+    position: sticky; /* Faz o nav ficar fixo quando rolar */
+    top: 0;
+    left: 0;
+    width: 100%; /* Garante que o menu ocupe toda a largura da tela */
+    z-index: 1000; /* Garante que o nav fique acima de outros elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
@@ -37,6 +46,10 @@ nav ul li {
     margin: 15px;
 }
 
+nav ul li:hover {
+    transform: scale(1.3); /* Efeito de destaque ao passar o mouse */
+}
+
 nav ul li a {
     color: #f2ebdb; /* Beige foreground */
     text-decoration: none;
@@ -47,7 +60,7 @@ nav ul li a:hover {
 }
 
 main {
-    background-color: white; /* White background */
+    background-color: #f2ebdb; /* Beige foreground */
     padding: 20px;
 }
 
@@ -55,10 +68,11 @@ main {
     display: flex;
     justify-content: space-between;
     gap: 20px; /* Espaço entre os projetos */
+    margin: 50px 200px 20px 200px;
 }
 
 .project {
-    width: 30%; /* Tamanho das colunas (aproximadamente 3 colunas) */
+    width: 25%; /* Tamanho das colunas (aproximadamente 3 colunas) */
     text-align: center;
     position: relative; /* Necessário para o posicionamento do conteúdo */
     overflow: hidden; /* Para cortar as partes da imagem que ultrapassam o tamanho da coluna */
@@ -78,14 +92,27 @@ main {
     left: 50%; /* Centraliza o título horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta o título para ser exatamente centrado */
     z-index: 10; /* Garante que o título fique acima da imagem */
-    color: white; /* Cor do texto (ajuste conforme necessário) */
+    color: #f2ebdb; /* Beige foreground */
     background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o título */
     padding: 10px; /* Espaçamento em torno do título */
-    font-size: 1.2rem; /* Tamanho da fonte (ajuste conforme necessário) */
+    font-size: 1rem; /* Tamanho da fonte (ajuste conforme necessário) */
     margin: 0; /* Remove margens padrão do h2 */
 }
 
 .project:hover {
     transform: scale(1.05); /* Efeito de destaque ao passar o mouse */
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column; /* Muda de 3 colunas para 1 coluna */
+        align-items: center; /* Centraliza os itens na tela */
+    }
+
+    .project {
+        width: 90%; /* Ajusta a largura para 90% para ocupar mais espaço na tela */
+        margin-bottom: 20px; /* Adiciona um espaçamento entre as imagens */
+        height: 300px; /* Ajusta a altura das imagens para uma altura fixa */
+    }
 }
