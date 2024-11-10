@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/contatosStyles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <title>Surama Rocha | Contatos</title>
+</head>
+<body>
+
+    <a href="./index.html" class="back-button">voltar aos projetos</a>
+
+    <div class="container">
+        <h2>Vamos conversar</h2>
+        <form id="contact-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="from_name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="user_email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="ENVIAR">
+        </form>
+        <div id="responseMessage"></div> <!-- Mensagem de resposta -->
+    </div>
+
+
+    <!-- Contatos -->
+    <section class="contacts">
+        <div class="contacts-content">
+            <p>Se preferir, pode entrar em contato diretamente<br>Esses são meus principais contatos:</p>
+            <h3>Email: suramarochadesign@gmail.com<br>Telefone|WhatsApp: 11 987864052</h3>
+        </div>
+    </section>
+
+    <a href="./index.html" class="back-button">voltar aos projetos</a>
+
+
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("UZpP7L6pn3vWmIMjX"); // Substitua pelo seu public key do EmailJS
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            emailjs.sendForm('service_up4jejw', 'template_jq3usk4', this) // Substitua pelos seus IDs
+                .then(() => {
+                    document.getElementById('responseMessage').innerHTML = 'Mensagem enviada com sucesso!';
+                }, (error) => {
+                    document.getElementById('responseMessage').innerHTML = 'Falha ao enviar: ' + JSON.stringify(error);
+                });
+        });
+    </script>
+</body>
+</html>

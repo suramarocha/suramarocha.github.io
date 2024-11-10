@@ -85,7 +85,7 @@ body{
   }
   
   .cta-button:hover {
-    background-color: #128C7E; /* Cor mais escura do WhatsApp no hover */
+    transform: scale(1.1);
   }
   
   @media (max-width: 62.5em) {

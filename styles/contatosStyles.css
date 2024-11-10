@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'allroundgothic';  /* Nome que você usará para referenciar a fonte */
+    src: url('../fonts/Fontspring-DEMO-allroundgothic-demioblique.otf') format('truetype');  /* Caminho para o arquivo da fonte */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    background-color: #c30a0d;
+    font-family: allroundgothic, sans-serif;
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+.container {
+    max-width: 600px; /* Largura máxima do contêiner */
+    margin: 3em auto; /* Centraliza o contêiner */
+    padding: 2em; /* Preenchimento interno */
+    background-color: #000; /* Cor de fundo do contêiner */
+    border-radius: 0.5em; /* Bordas arredondadas */
+    box-shadow: 0 0.1em 0.8em rgba(0, 0, 0, 0.1); /* Sombra suave */
+    color: #f2ebdb;
+}
+
+h2 {
+    text-align: center; /* Centraliza o título */
+}
+
+label {
+    display: block; /* Exibe como bloco para melhor layout */
+    margin-top: 0.8em; /* Margem acima dos rótulos */
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%; /* Largura total dos campos */
+    padding: 0.8em; /* Preenchimento interno */
+    margin-top: 0.3em; /* Margem acima dos campos */
+    border: 0.1em solid #ccc; /* Borda cinza clara */
+    border-radius: 0.3em; /* Bordas arredondadas */
+}
+
+input[type=submit] {
+    background-color: #f2ebdb; /* Cor de fundo do botão */
+    color: #c30a0d; /* Cor do texto do botão */
+    margin-top: 1em;
+    padding: 0.8em 1em; /* Preenchimento interno do botão */
+    border: none; /* Remove borda padrão */
+    border-radius: 0.3em; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    font-family: allroundgothic, sans-serif;
+}
+
+input[type=submit]:hover {
+    transform: scale(1.1);
+}
+
+#responseMessage {
+    text-align: center; /* Centraliza a mensagem de resposta */
+    margin-top: 1.5em; /* Margem acima da mensagem de resposta */
+}
+
+.back-button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0.8em 1.6em; /* Espaçamento interno do botão */
+    margin :1em;
+    font-size: 1em; /* Tamanho da fonte do botão */
+    color: #000; /* Cor do texto do botão */
+    background-color: #f2ebdb; /* Cor de fundo do botão */
+    border: none; /* Remove bordas padrão */
+    border-radius: 0.3em; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+    text-decoration: none;
+}
+
+.back-button:hover{
+    background-color: #000;
+    color: #f2ebdb;
+}
+
+.contacts {
+    background-color: #000; /* Cor de fundo suave */
+    padding: 2rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .contacts-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .contacts h3 {
+    font-size: 1.5rem;
+    color: #f2ebdb;
+    margin-bottom: 1.2rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .contacts p {
+    font-size: 1.1rem;
+    color: #f2ebdb;
+    margin-bottom: 1.2rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  @media (max-width: 62.5em) {
+    .contacts h3 {
+      font-size: 1rem;
+    }
+  
+    .contacts p {
+      font-size: 1rem;
+    }
+}

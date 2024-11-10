@@ -115,8 +115,8 @@ main {
 .projects {
     display: flex;
     justify-content: space-between;
-    gap: 2rem; /* Espaço entre os projetos */
-    margin: 2rem 10rem 1rem 10rem;
+    gap: 3%; /* Espaço entre os projetos */
+    margin: 2rem 8% 1rem 8%;
 }
 
 .project {
@@ -145,6 +145,7 @@ main {
     padding: 0.5rem; /* Espaçamento em torno do título */
     font-size: 1rem; /* Tamanho da fonte (ajuste conforme necessário) */
     margin: 0; /* Remove margens padrão do h2 */
+    width: max-content;
 }
 
 .project:hover {
@@ -197,7 +198,7 @@ main {
   }
   
   .cta-button:hover {
-    background-color: #128C7E; /* Cor mais escura do WhatsApp no hover */
+    transform: scale(1.1);
   }
   
   @media (max-width: 62.5em) {
