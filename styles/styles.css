@@ -115,12 +115,13 @@ main {
 .projects {
     display: flex;
     justify-content: space-between;
-    gap: 3%; /* Espaço entre os projetos */
+    height: 28rem;
+    gap: 1rem; /* Espaço entre os projetos */
     margin: 2rem 8% 1rem 8%;
 }
 
 .project {
-    width: 25%; /* Tamanho das colunas (aproximadamente 3 colunas) */
+    width: 20%; /* Tamanho das colunas (aproximadamente 3 colunas) */
     text-align: center;
     position: relative; /* Necessário para o posicionamento do conteúdo */
     overflow: hidden; /* Para cortar as partes da imagem que ultrapassam o tamanho da coluna */
@@ -200,7 +201,7 @@ main {
   .cta-button:hover {
     transform: scale(1.1);
   }
-  
+
   @media (max-width: 62.5em) {
     .cta h2 {
       font-size: 2rem;
@@ -219,6 +220,7 @@ main {
         flex-direction: column; /* Muda de 3 colunas para 1 coluna */
         align-items: center; /* Centraliza os itens na tela */
         margin: 0;
+        height: auto;
     }
 
     .project {

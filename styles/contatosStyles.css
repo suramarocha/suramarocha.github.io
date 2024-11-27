@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 600px; /* Largura máxima do contêiner */
+    max-width: 37.5em; /* Largura máxima do contêiner */
     margin: 3em auto; /* Centraliza o contêiner */
     padding: 2em; /* Preenchimento interno */
     background-color: #000; /* Cor de fundo do contêiner */
@@ -114,4 +114,5 @@ input[type=submit]:hover {
     .contacts p {
       font-size: 1rem;
     }
+
 }
