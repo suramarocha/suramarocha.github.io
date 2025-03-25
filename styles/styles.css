@@ -7,59 +7,74 @@
 body {
     margin: 0;
     font-family: allroundgothic, sans-serif;
+    background-color: #161111;
 }
 
 header {
-    background-color: #c30a0d; /* Red background */
-    color: #f2ebdb;
-    text-align: center;
-    padding: 20px 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-container {
+  line-height: 0;
 }
 
 .logo {
-    width: 20rem; /* Adjust as necessary */
-    margin: 2rem;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 nav {
-    background-color: #000; /* Dark background */
-    min-height: 3em;
-    position: sticky; /* Faz o nav ficar fixo quando rolar */
-    top: 0;
-    left: 0;
-    width: 100%; /* Garante que o menu ocupe toda a largura da tela */
-    z-index: 1000; /* Garante que o nav fique acima de outros elementos */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #EDD6C3;
+  min-height: 1em;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+  list-style: none;
+  padding: 0 1em 0 1em;
+  margin: 0;
+  display: flex;
+  justify-content: space-between; /* Alinha os elementos à esquerda e à direita */
+  width: 100%; /* Garante que o ul ocupe toda a largura do nav */
+}
+
+/* Estilos para os containers left e right */
+.left, .right {
+  display: flex; /* Garante que os itens dentro dos containers fiquem em linha */
+  align-items: center; /* Alinha verticalmente os itens */
 }
 
 nav ul li {
-    margin: 1rem;
+  margin: 0 1em 0 1em;
 }
 
 nav ul li:hover:not(.noScale) {
-    transform: scale(1.3); /* Efeito de destaque ao passar o mouse */
+  transform: scale(1.3);
 }
 
 nav ul li a {
-    color: #f2ebdb; /* Beige foreground */
-    text-decoration: none;
+  color: #AF5A84;
+  text-decoration: none;
 }
+
 
 /* Estilo do botão do dropdown */
 .dropbtn {
-  background-color: #000; /* Cor de fundo */
-  color: #f2ebdb; /* Cor do texto */
-  padding: 1.5rem 1rem;
+  background-color: #EDD6C3; /* Cor de fundo */
+  color: #AF5A84; /* Cor do texto */
+  padding: 0.5rem 0.5rem;
   border: none; /* Sem borda */
   cursor: pointer; /* Cursor de ponteiro */
 }
@@ -74,24 +89,26 @@ nav ul li a {
 .dropdown-content {
   display: none; /* Oculto inicialmente */
   position: absolute; /* Posicionamento absoluto em relação ao container */
-  background-color: #f2ebdb; /* Cor de fundo do dropdown */
-  min-width: 10rem; /* Largura mínima */
+  background-color: #EDD6C3; /* Cor de fundo do dropdown */
+  min-width: 8rem; /* Largura mínima */
   box-shadow: 0rem 0.5rem 1rem rgba(0,0,0,0.2); /* Sombra */
   z-index: 1; /* Para garantir que fique acima de outros elementos */
+  padding: 0.5em 0;
 }
 
 /* Links dentro do dropdown */
 .dropdown-content a {
   color: black; /* Cor do texto dos links */
-  padding: 0.8rem 1rem; /* Espaçamento interno dos links */
+  padding: 0.3rem 0.8rem; /* Espaçamento interno dos links */
   text-decoration: none; /* Sem sublinhado nos links */
   display: block; /* Exibe como bloco para ocupar toda a largura */
+  font-size: 0.7em;
 }
 
 /* Muda a cor dos links ao passar o mouse */
 .dropdown-content a:hover {
-  background-color: #f2ebdb; /* Cor de fundo ao passar o mouse */
-  color: #c30a0d;
+  background-color: #EDD6C3; /* Cor de fundo ao passar o mouse */
+  color: #AF5A84;
   transform: scale(1.1);
 }
 
@@ -102,64 +119,74 @@ nav ul li a {
 
 /* Muda a cor do botão quando o dropdown é mostrado */
 .dropdown:hover .dropbtn {
-  background-color: #c30a0d; /* Cor do botão ao hover */
+  background-color: #EDD6C3; /* Cor do botão ao hover */
   transform: scale(1.1);
 }
 
 
 main {
-    background-color: #f2ebdb; /* Beige foreground */
+    background-color: #161111;
     padding: 1.5rem;
 }
 
+h4{
+  color: #EDD6C3;
+  text-align: center;
+}
+
 .projects {
-    display: flex;
-    justify-content: space-between;
-    height: 28rem;
-    gap: 1rem; /* Espaço entre os projetos */
-    margin: 2rem 8% 1rem 8%;
+  display: block; /* Muda para layout vertical */
+  margin: 2rem 8% 1rem 8%;
 }
 
 .project {
-    width: 20%; /* Tamanho das colunas (aproximadamente 3 colunas) */
-    text-align: center;
-    position: relative; /* Necessário para o posicionamento do conteúdo */
-    overflow: hidden; /* Para cortar as partes da imagem que ultrapassam o tamanho da coluna */
-    transition: transform 0.3s;
+  width: 100%; /* Ajusta a largura para ocupar toda a linha */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+  margin-bottom: 1rem; /* Adiciona espaço entre os projetos */
 }
 
 .project img {
-    width: 100%;
-    height: 100%; /* Faz com que a imagem tenha 100% da altura do contêiner */
-    object-fit: cover; /* Faz com que a imagem preencha o contêiner, mantendo a proporção e cortando se necessário */
-    object-position: center; /* Centraliza a imagem para que o corte seja feito de forma equilibrada */
+  width: 100%;
+  height: 10rem; /* Ajusta a altura da imagem */
+  object-fit: cover;
+  object-position: center;
 }
 
 .project h2 {
-    position: absolute; /* Coloca o título sobre a imagem */
-    top: 95%; /* Posiciona o título no meio da coluna */
-    left: 50%; /* Centraliza o título horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta o título para ser exatamente centrado */
-    z-index: 10; /* Garante que o título fique acima da imagem */
-    color: #f2ebdb; /* Beige foreground */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o título */
-    padding: 0.5rem; /* Espaçamento em torno do título */
-    font-size: 1rem; /* Tamanho da fonte (ajuste conforme necessário) */
-    margin: 0; /* Remove margens padrão do h2 */
-    width: max-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #AF5A84;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0;
+  width: max-content;
+  display: none;
 }
 
 .project:hover {
-    transform: scale(1.05); /* Efeito de destaque ao passar o mouse */
-    cursor: pointer;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.project:hover h2{
+  display: block;
 }
 
 /* Estilos para a seção de Chamada para Ação */
 .cta {
-    background-color: #000; /* Cor de fundo suave */
-    padding: 2rem 2rem;
+    background-color: #161111; /* Cor de fundo suave */
+    padding: 0.8rem;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.5rem #AF5A84; /* Sombra */
   }
   
   .cta-content {
@@ -168,15 +195,15 @@ main {
   }
   
   .cta h2 {
-    font-size: 2.5rem;
-    color: #f2ebdb;
-    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    color: #EDD6C3;
+    margin-bottom: 1rem;
     font-family: 'Arial', sans-serif;
   }
   
   .cta p {
-    font-size: 1.1rem;
-    color: #f2ebdb;
+    font-size: 1rem;
+    color: #EDD6C3;
     margin-bottom: 1.2rem;
     font-family: 'Arial', sans-serif;
   }
@@ -187,7 +214,7 @@ main {
     padding: 0.8rem 2rem;
     background-color: #25D366; /* Cor verde do WhatsApp */
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-decoration: none;
     border-radius: 3rem;
     font-family: 'Arial', sans-serif;
