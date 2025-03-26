@@ -16,8 +16,14 @@ img{
 }
 
 body{
-    background-color: #f2ebdb;
+    background-color: #161111;
     font-family: allroundgothic, sans-serif;
+}
+
+.content {
+    padding: 1em 0;
+    box-shadow: 0rem 0rem 0.5rem #EDD6C3; /* Sombra */
+    border-radius: 0.5em;
 }
 
 .back-button {
@@ -27,8 +33,8 @@ body{
     padding: 0.8em 1.6em; /* Espaçamento interno do botão */
     margin :1em;
     font-size: 1em; /* Tamanho da fonte do botão */
-    color: #f2ebdb; /* Cor do texto do botão */
-    background-color: #000; /* Cor de fundo do botão */
+    color: #EDD6C3; /* Cor do texto do botão */
+    background-color: #AF5A84; /* Cor de fundo do botão */
     border: none; /* Remove bordas padrão */
     border-radius: 5px; /* Bordas arredondadas do botão */
     cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
@@ -37,56 +43,60 @@ body{
 }
 
 .back-button:hover{
-    background-color: #c30a0d;
+    font-size: 1.1em;
+    margin: 0.9em;
+    padding: 0.7em 1.5em;
 }
 
 /* Estilos para a seção de Chamada para Ação */
 .cta {
-    background-color: #000; /* Cor de fundo suave */
-    padding: 2rem 2rem;
-    text-align: center;
-    margin-top: 3rem;
-  }
-  
-  .cta-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .cta h2 {
-    font-size: 2.5rem;
-    color: #f2ebdb;
-    margin-bottom: 1.2rem;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .cta p {
-    font-size: 1.1rem;
-    color: #f2ebdb;
-    margin-bottom: 1.2rem;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .cta-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.8rem 2rem;
-    background-color: #25D366; /* Cor verde do WhatsApp */
-    color: white;
-    font-size: 1.2rem;
-    text-decoration: none;
-    border-radius: 3rem;
-    font-family: 'Arial', sans-serif;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button i {
-    margin-right: 0.8rem;
-  }
-  
-  .cta-button:hover {
-    transform: scale(1.1);
-  }
+  background-color: #161111; /* Cor de fundo suave */
+  padding: 0.8rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.5rem #AF5A84; /* Sombra */
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  font-size: 1.5rem;
+  color: #EDD6C3;
+  margin-bottom: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.cta p {
+  font-size: 1rem;
+  color: #EDD6C3;
+  margin-bottom: 1.2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background-color: #25D366; /* Cor verde do WhatsApp */
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 3rem;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button i {
+  margin-right: 0.8rem;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+}
   
   @media (max-width: 62.5em) {
     .cta h2 {
