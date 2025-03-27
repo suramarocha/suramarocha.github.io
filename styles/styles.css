@@ -256,4 +256,14 @@ h4{
         margin-bottom: 0.5em; /* Adiciona um espaçamento entre as imagens */
         height: 30rem; /* Ajusta a altura das imagens para uma altura fixa */
     }
+
+    .project img {
+      height: 6rem; /* Ajusta a altura da imagem */
+    }
+
+    .project {
+      width: 100%; /* Ajusta a largura para ocupar toda a linha */
+      height: 6rem;
+      margin-bottom: 1rem; /* Adiciona espaço entre os projetos */
+    }
 }
